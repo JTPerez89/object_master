@@ -61,13 +61,6 @@ console.log(firstOfSecond);
 
 // ----- 8 -----
 
-let normalCount = pokémon.map((p, count=0) => {
-    if(p.types.includes('normal')) {
-        count++
-    }
-    return count;
-})
-
-normalCount = normalCount[normalCount.length-1]
+const normalCount = pokémon.filter(p => p.types == 'normal').length
 
 console.log(normalCount);
